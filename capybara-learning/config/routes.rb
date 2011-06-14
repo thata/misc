@@ -1,4 +1,7 @@
 CapybaraLearning::Application.routes.draw do
+  get "hello/world"
+  get "hello/items"
+
   resources :articles
 
   # The priority is based upon order of creation:
