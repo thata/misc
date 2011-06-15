@@ -8,16 +8,10 @@ $(function () {
     }
 
     // items2
-    var data = $.ajax({
-      async: false,
-      type: 'GET',
-      dataType: "json",
-      url: "/hello/items",
-    }).responseText;
-    var json = $.parseJSON(data);
-    var result = json.result;
-    console.log(json);
-    for (var i in result) {
-      $("#items2").append($("<li>" + i + "</li>"));
-    }
-    });
+    $.get("/hello/items", function(data) {
+        var result = data.result;
+        for (var e in result) {
+          $("#items2").append($("<li>" + e + "</li>"));
+        }
+      });
+});
