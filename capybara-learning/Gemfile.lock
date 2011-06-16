@@ -110,7 +110,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
+  capybara (>= 1.0)
   jquery-rails
   launchy
   rails (= 3.0.8)
